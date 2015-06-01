@@ -1,0 +1,17 @@
+{
+  "name": "Filter",
+  "description": "Filter data",
+  "type": "utility",
+  "connectionsIn": 1,
+  "connectionsOut": 1,
+  "customIcon": "fa-filter",
+  "hasSettings": true,
+  "defaultSettings": {
+    "filterText":"",
+    "properties":[]
+  },
+  "source": {
+    "label": "Core Slab",
+    "url": "http://slabs.io/"
+  }
+}
