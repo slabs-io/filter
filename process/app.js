@@ -25,10 +25,18 @@ exports.process = function (input) {
             var found = false;
             
             _.each(properties, function(property){
+
+                var searchText;
+
+                if(property.indexOf('.') > -1){
+                    var props = property.split(".");
+                    searchText = item[props[0]][props[1]];
+                }else{
+                    searchText = item[property];
+                }
+
                 
-                var propertyText = item[property];
-                
-                if(propertyText && propertyText.toLowerCase().indexOf(filterText) > -1){
+                if(searchText && typeof searchText === 'string' && searchText.toLowerCase().indexOf(filterText) > -1){
                     found = true;
                 }
             });
