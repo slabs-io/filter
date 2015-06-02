@@ -30,7 +30,9 @@ exports.process = function (input) {
 
                 if(property.indexOf('.') > -1){
                     var props = property.split(".");
-                    searchText = item[props[0]][props[1]];
+                    if(item[props[0]]){
+                        searchText = item[props[0]][props[1]];
+                    }
                 }else{
                     searchText = item[property];
                 }
